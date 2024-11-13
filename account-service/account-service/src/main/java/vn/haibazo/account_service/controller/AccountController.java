@@ -1,15 +1,26 @@
 package vn.haibazo.account_service.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+import vn.haibazo.account_service.dto.request.AccountRequest;
+import vn.haibazo.account_service.dto.request.LoginRequest;
+import vn.haibazo.account_service.dto.response.AccountResponse;
+import vn.haibazo.account_service.dto.response.LoginResponse;
+import vn.haibazo.account_service.service.AccountService;
 
 @RestController
-@RequestMapping("/account")
+@RequestMapping("/auth")
 public class AccountController {
-    @GetMapping("/")
-    public String getAccount() {
-        return "Account Service is running!";
+    @Autowired
+    private AccountService accountService ;
+    @PostMapping("/register")
+    public AccountResponse createAccount(@RequestBody AccountRequest accountRequest) {
+      return this.accountService.create(accountRequest);
     }
+    @PostMapping("/login")
+    public LoginResponse login(@RequestBody LoginRequest loginRequest) {
+        return this.accountService.login(loginRequest);
+    }
+
 }
 
