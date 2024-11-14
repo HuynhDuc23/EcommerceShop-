@@ -6,4 +6,6 @@ import vn.haibazo.account_service.entity.Account;
 @Repository
 public interface AccountRepository extends JpaRepository<Account,Long> {
     public Account findByUsername(String username);
+
+    public boolean existsByUsername(String username);
 }

@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 import vn.haibazo.account_service.dto.request.AccountRequest;
 import vn.haibazo.account_service.dto.request.LoginRequest;
 import vn.haibazo.account_service.dto.response.AccountResponse;
+import vn.haibazo.account_service.dto.response.AuthenticationResponse;
 import vn.haibazo.account_service.dto.response.LoginResponse;
 import vn.haibazo.account_service.service.AccountService;
 
@@ -18,7 +19,7 @@ public class AccountController {
       return this.accountService.create(accountRequest);
     }
     @PostMapping("/login")
-    public LoginResponse login(@RequestBody LoginRequest loginRequest) {
+    public LoginResponse login(@RequestBody LoginRequest loginRequest) throws Exception {
         return this.accountService.login(loginRequest);
     }
 
