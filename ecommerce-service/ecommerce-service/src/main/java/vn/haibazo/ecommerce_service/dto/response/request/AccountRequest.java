@@ -1,4 +1,4 @@
-package vn.haibazo.account_service.dto.request;
+package vn.haibazo.ecommerce_service.dto.response.request;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

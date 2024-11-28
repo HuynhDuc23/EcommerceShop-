@@ -1,4 +1,4 @@
-package vn.haibazo.account_service.dto.request;
+package vn.haibazo.ecommerce_service.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class LoginRequest {
-    private String username;
-    private String password;
+public class ItsRctProductVariantGroupResponseV1 {
+    private String key ;
+    private String name ;
 }

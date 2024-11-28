@@ -37,10 +37,10 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Identify-service" options="-parameters" />
       <module name="account-service" options="-parameters" />
-      <module name="api-gateway" options="-parameters" />
-      <module name="discovery-service" options="-parameters" />
+      <module name="api-gateway" options="" />
+      <module name="discovery-service" options="" />
       <module name="ecommerce-service" options="-parameters" />
-      <module name="identity-service" options="-parameters -Amapstruct.suppressGeneratorTimestamp=true -Amapstruct.defaultComponentModel=spring -Amapstruct.verbose=true" />
+      <module name="identity-service" options="" />
       <module name="server-config" options="-parameters" />
     </option>
   </component>
